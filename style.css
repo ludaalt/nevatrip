@@ -1,0 +1,271 @@
+* {
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-style: normal;
+    color: #000;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    margin: 20px 0;
+    border: 0.3px solid #828282;
+}  
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+    
+.img-wrap {
+    border-radius: 16px 16px 0 0;
+    background-image: url('./img/spb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;    
+    min-height: 220px;
+    display: flex;
+    align-items: flex-start;
+}
+    
+    
+.label {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 30px;
+    background: #FED74B;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #3E3E3E;
+    text-transform: uppercase;
+}  
+
+.label-blue {
+    margin-top: 0;
+    background: #7553FF;
+
+    border-radius: 16px 0 16px 0;
+}
+
+
+.clock {
+    position: relative;
+    font-size: 12px;
+    line-height: 20px;
+    color: #9E9E9E;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.clock::before {
+    position: absolute;
+    content: '';
+    background: url('./img/icons/clock.svg');
+    background-repeat: no-repeat;
+    left: -25px;
+    top: 1px;
+    width: 20px;
+    height: 20px;    
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #404040;
+}
+
+.advantages-list {
+    margin-top: 10px;
+    list-style: none;
+   /* list-style: url('./img/icons/check-mark.svg');*/
+}
+
+
+.advantages-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 25px;    
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4B4B4B;
+}
+
+.advantages-item::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: -25px;
+    top: 2px;
+    background-image: url('./img/icons/check-mark.svg');
+    background-repeat: no-repeat;
+}
+
+.advantages-item time {
+    display: inline-block;
+    padding: 2px 12px;    
+    font-size: 14px;
+    line-height: 20px;
+    color: #343434;
+    background: #D9E8FF;
+    border-radius: 11px;
+
+    margin-top: 10px;
+}
+
+.advantages-item time:hover {
+    background: #6BA6FF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+}
+
+.advantages-item time:not(:last-child) {
+    margin-right: 5px;
+}
+
+.card-footer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 16px 16px;
+}
+
+.price {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 20px;
+    margin: 0;
+    position: relative;
+}
+
+.price::after {
+    position: absolute;
+    content: '';
+    right: -35px;
+    height: 30px;
+    width: 30px;
+    background-image: url('./img/icons/ruble.svg');
+    background-repeat: no-repeat;
+}
+
+.price-more {   
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.button {
+    cursor: pointer;
+    padding: 10px 30px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #404040;
+    background: #FED74B;
+    border: 0.5px solid #CBA500;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.button:hover {
+    background: #ebbc12;
+}
+
+.time-line {
+    margin: 0 0 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 600px) {
+    .label {
+        padding: 12px 35px;
+        font-size: 16px; 
+    }
+
+    .clock {
+        font-size: 14px;
+    }
+
+    .card {
+        flex-direction: row;
+        justify-content: space-between;        
+    }
+
+    .card-wrap {
+        border-radius: 0 16px 16px 0;
+    }
+
+    .card-body {
+        border-radius: 0 16px 0 0;
+    }
+
+    .card-title {
+        order: -1;
+        font-size: 26px;
+        line-height: 34px;         
+        margin-bottom: -5px;
+    }
+
+    .img-wrap {
+        min-width: 40%;
+        border-radius: 16px 0 0 16px;
+    }
+
+    .advantages-item {
+        flex-direction: row;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .time-line {
+       margin: 0 0 0 10px;
+       display: flex;
+       flex-wrap: wrap;
+    }
+
+    .advantages-item time {
+        margin-top: -1px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 36px;
+    }
+
+    .price-more {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 20px;
+        padding: 15px 32px;
+        margin-left: 30px;
+    }
+
+    .card-footer {
+        border-radius: 0 0 16px 0;
+        justify-content: flex-start;
+    }
+}
